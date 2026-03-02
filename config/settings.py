@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="unsafe-dev-secret-key-change-me")
 DEBUG = config("DEBUG", default=False, cast=bool)
 
 # Railway domain utaipata baada ya deploy, mfano: myapp.up.railway.app
